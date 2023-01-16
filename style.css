@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+/* font-family: 'Ubuntu', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  background: url(./bg.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.clock {
+  position: relative;
+  max-width: 400px;
+  margin: 20px;
+  width: 100%;
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 100vh;
+}
+
+.clock::after {
+  content: '';
+  position: absolute;
+  inset: 15px;
+  border: 2px solid white;
+  border-radius: 100vh;
+}
+
+.center-dot {
+  aspect-ratio: 1;
+  height: 20px;
+  background: white;
+  border-radius: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hour,
+.minute,
+.second {
+  font-weight: 400;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transform-origin: bottom;
+  border-radius: 100vh;
+}
+
+.hour {
+  background: rgb(255, 0, 0, 0.6);
+  width: 8px;
+  height: 80px;
+}
+
+.minute {
+  background: rgb(0, 255, 0, 0.6);
+  width: 5px;
+  height: 100px;
+}
+
+.second {
+  background: rgb(0, 0, 255, 0.6);
+  width: 2px;
+  height: 130px;
+}
+
+/* digital hour hand  */
+.digital-hour {
+  position: absolute;
+  top: -18px;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background: white;
+  height: 24px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-size: 0.7em;
+  border-radius: 100vh;
+}
+
+.digital-hour::after {
+  content: '';
+  height: 28px;
+  aspect-ratio: 1;
+  border-bottom: 2px solid white;
+  position: absolute;
+  bottom: -4px;
+  border-radius: 100vh;
+}
+
+/* digital minute hand */
+.digital-minute {
+  position: absolute;
+  top: -18px;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background: white;
+  height: 24px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-size: 0.7em;
+  border-radius: 100vh;
+}
+
+.digital-minute::after {
+  content: '';
+  height: 28px;
+  aspect-ratio: 1;
+  border-bottom: 2px solid white;
+  position: absolute;
+  bottom: -4px;
+  border-radius: 100vh;
+}
+
+/* digital second hand */
+.digital-second {
+  position: absolute;
+  top: -28px;
+  right: 100;
+  transform: translateX(-50%);
+  background: white;
+  height: 24px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-size: 0.7em;
+  border-radius: 100vh;
+}
+
+.digital-second::after {
+  content: '';
+  height: 28px;
+  aspect-ratio: 1;
+  border-bottom: 2px solid white;
+  position: absolute;
+  bottom: -4px;
+  border-radius: 100vh;
+}
+
+.digital-clock {
+  position: absolute;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2em;
+  border-bottom: 1px solid white;
+  padding: 0.5rem
+}
