@@ -136,9 +136,9 @@ html {
 /* digital second hand */
 .digital-second {
   position: absolute;
-  top: -28px;
-  right: 100;
-  transform: translateX(-50%);
+   top: -18px;
+  right: 50%;
+  transform: translate(50%, -50%);
   background: white;
   height: 24px;
   aspect-ratio: 1;
